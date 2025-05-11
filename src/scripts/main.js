@@ -4,10 +4,10 @@
 
 function parseSalary(salaryStr) {
   const withoutDollar = salaryStr.slice(1);
-  const withoutComma = withoutDollar.replace(',', '');
-
+  const withoutComma = withoutDollar.split(',').join('');
   return parseFloat(withoutComma);
 }
+
 
 function sortList(list) {
   const ul = list[0].parentElement;
